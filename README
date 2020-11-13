@@ -1,0 +1,40 @@
+Two ways to plot graphs:
+1. run the script  " sh generatePlots.sh " to generate
+the graphs specific for task mentioned in assignment.This script don't take
+any command line args.
+
+2. or run the "python3 executeGridWorld.py" command with required command line
+args to generate different plots.
+
+
+Command Line Arguments that can passed to "python3 executeGridWorld.py":
+1. seed -->> over how many seed we need to take avg. (default value 10)
+2. agent -->> which agent to use ('sarsa', 'qlearning', 'expectedsarsa') if not passed then it will run over all three.
+3. kingsMove  -->> 0 or 1(kings move allowed) (default value 0)
+4. stochasticity -->> 0 or 1(stochasticity of windshift allowed) (default value 0)
+5. timeSteps -->> timesteps (default value 8000)
+6. epsilon -->> (default value 0.1)
+7. alpha -->> (default value 0.5)
+8. fileName -->> if empty, program will give a meaningful name by itself.
+
+None of above parameter are mandatory.
+Usage:
+1. To generate graph and data for all three agents with no kings move and no
+stochasticity of wind. Run the following:
+" python3 executeGridWorld.py "
+
+2. To generate graph and data for sarsa with kings move and no
+stochasticity of wind. Run the following:
+" python3 executeGridWorld.py --agent sarsa --kingsMove 1 "
+
+3. To generate graph and data for sarsa with kings move and with
+stochasticity of wind. Run the following:
+" python3 executeGridWorld.py --agent sarsa --kingsMove 1 --stochasticity 1 "
+
+4. To generate graph and data for qlearning with no kings move and no
+stochasticity of wind. Run the following:
+" python3 executeGridWorld.py --agent qlearning "
+
+5. To generate graph and data for qlearning with no kings move and no
+stochasticity of wind. Run the following:
+" python3 executeGridWorld.py --agent expectedsarsa "
